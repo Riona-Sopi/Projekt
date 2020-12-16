@@ -269,6 +269,53 @@ select:focus{
     color: white;
 }
 
+/*About us page*/
+.container1{
+    background: radial-gradient(#fff,lightblue);
+    margin-top: 0px;
+    padding: 30px;
+}
+.container2{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    text-align:center;
+}
+.in{
+    font-size:x-large;
+    line-height: 2;
+    border-bottom: 1px solid darkgrey;
+    padding-bottom:25px;
+}
+.inner{
+    font-size:medium;
+    line-height: 1.5;
+}
+.par1{
+    line-height: 1.5;
+    font-size:medium;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.par2{
+    line-height: 1.5;
+    font-size:medium;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.thefounders{
+    text-align:center;
+    font-size:x-large;
+    padding-bottom: 30px;
+    
+
+}
+.role{
+    font-size:50px;
+    line-height:0px;
+}
 
 /* media query for menu */
 @media only screen and (max-width:800px){
