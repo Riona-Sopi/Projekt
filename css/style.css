@@ -239,11 +239,7 @@ h4{
   .demo:hover {
     opacity: 1;
   }
-.offer{
-    background: radial-gradient(#fff,lightblue);
-    margin-top: 80px;
-    padding: 30px;
-}
+
 .col-2 .offer-img{
     padding: 80px;
 }
