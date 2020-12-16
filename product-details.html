@@ -6,7 +6,7 @@
     <!-- for media quering -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- TODO: Rename -->
-    <title>All Products</title>
+    <title>Product Details</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -32,82 +32,57 @@
 
         </div>
     </div>
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/korabi.jpg" width="100%" id="productImg">
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="images/korabi.jpg" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/riona.jpg" class="small-img">
+
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/qendrimi-2.jpg" class="small-img">
+
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/korabi.jpg" class="small-img">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <p>Home / Hoodie</p>
+                <h1>Red Hoodie by superinjo</h1>
+                <h4>80$</h4>
+                <select>
+                    <option>Select Size</option>
+                    <option>Large</option>
+                    <option>Medium</option>
+                    <option>Small</option>
+                </select>
+                <input type="number" value="1">
+                <a href="" class="btn">Add To Cart</a>
+                <h3>Product Details</h3>
+                <br>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                    quia voluptas sit</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- title -->
     <div class="small-container">
-        <div class=" row row-2">
-            <h2>All Products</h2>
-            <select>
-                <option>Sort by default</option>
-                <option>Sort by price</option>
-            </select>
+        <div class="row row-2">
+            <h2>Related Products</h2>
+            <p>View More</p>
         </div>
-        <div class="row">
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" class="product">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
+    </div>
 
-                </div>
-                <p>30$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" class="product">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
-
-                </div>
-                <p>30$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" class="product">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
-
-                </div>
-                <p>30$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" class="product">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
-
-                </div>
-                <p>30$</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" class="product">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
-
-                </div>
-                <p>30$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" class="product">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
-
-                </div>
-                <p>30$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" class="product">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
-
-                </div>
-                <p>30$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" alt="">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
-
-                </div>
-                <p>30$</p>
-            </div>
-        </div>
+    <div class="small-container">
         <div class="row">
             <div class="col-4">
                 <img src="images/hoodie-feature.jpg" alt="">
@@ -141,13 +116,6 @@
                 </div>
                 <p>30$</p>
             </div>
-        </div>
-        <div class="page-btn">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>&#8594;</span>
         </div>
     </div>
 
@@ -187,6 +155,7 @@
         </div>
     </div>
 
+    <!-- toggle menu -->
     <script>
         var menuItems = document.getElementById("menuItems");
         menuItems.style.maxHeight = "0px";
@@ -201,15 +170,34 @@
         }
     </script>
 
+    <!-- product gallery -->
     <script>
-        var allProducts = document.querySelectorAll(".product");
-        allProducts.forEach(element => {
+        var productImg = document.getElementById("productImg");
+        // var smallImg = document.getElementsByClassName("small-img");
+        var smallImgs = document.querySelectorAll(".small-img");
+        console.log(smallImgs);
+        smallImgs.forEach(element => {
             element.onclick = function() {
-                window.location.href = "product-details.html";
+                productImg.src = element.src;
             }
-
         });
+
+        // smallImg[0].onclick = function() {
+        //     productImg.src = smallImg[0].src;
+        // }
+        // smallImg[1].onclick = function() {
+        //     productImg.src = smallImg[1].src;
+        // }
+        // smallImg[2].onclick = function() {
+        //     productImg.src = smallImg[2].src;
+        // }
+        // smallImg[3].onclick = function() {
+        //     productImg.src = smallImg[3].src;
+        // }
+
+        // }
     </script>
+
 </body>
 
 </html>
