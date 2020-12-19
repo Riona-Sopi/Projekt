@@ -397,51 +397,72 @@ input:focus {
     cursor: pointer;
 }
 
+
 /*Contact Us page*/
-.Contact-Title{
+
+.Contact-Title {
     text-align: center;
-    margin-top:50px;
+    margin-top: 50px;
     text-transform: uppercase;
     transition: all 4s ease-in-out;
 }
-.Contact-Title h1{
-    font-size:28px;
+
+.Contact-Title h1 {
+    font-size: 28px;
     line-height: 30px;
 }
-.contact-form{
+
+.contact-form {
     text-align: center;
 }
-form{
+
+form {
     margin: 50px;
     transition: all 4s ease-in-out;
 }
-.form-control{
-    width:600px;
-    background:transparent;
-    border:none;
-    outline:none;
-    border-bottom: 1px solid darkgrey;
-    color:black;
-    font-size: 18px;
-    margin-bottom:16px;
-}
-input{
-    height:37px;
-}
-form .submit{
-    background: black;
-    border-color:transparent;
-    color: white;
-    font-size:25px;
-    letter-spacing: 2px;
-    height:45px;
-    margin-top:5px;
-}
-form .submit:hover{
-    background-color:#6813A9;
-    cursor: pointer;
 
+.form-control {
+    width: 100%;
+    max-width: 540px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid darkgrey;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 16px;
 }
+
+textarea {
+    resize: none;
+}
+
+input {
+    height: 37px;
+}
+
+form .submit {
+    background: black;
+    border-color: transparent;
+    color: white;
+    letter-spacing: 2px;
+    height: 45px;
+    margin-top: 5px;
+}
+
+form .submit:hover {
+    background-color: #6813A9;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+}
+
+.error {
+    color: red;
+}
+
 
 /* media query for menu */
 

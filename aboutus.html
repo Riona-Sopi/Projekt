@@ -7,16 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- TODO: Rename -->
     <title>All Products</title>
+
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="js/form-validation.js"></script>
+
 </head>
 
 <body>
     <div class="container">
         <div class="navbar">
             <div class="logo">
-                <img src="images/logo.png" alt="Hustlers" width="125px">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Hustlers" width="125px">
+                </a>
             </div>
             <nav>
                 <ul id="menuItems">
@@ -70,17 +77,17 @@
                 </div>
             </div>
         </div>
-        <div class = "Contact-Title">
+        <div class="Contact-Title">
             <h1>Contact Us</h1>
         </div>
-        <div class = "contact-form">
-            <form id ="contact-form" method = "post" action ="">
-                <input name ="name" type = "text" class = "form-control" placeholder="Your Full name" required><br>
-                <input name ="address" type = "text" class = "form-control" placeholder="Your Address" required><br>
-                <input name ="email" type = "email" class = "form-control" placeholder="Your Email" required><br>
-                <input name ="phone" type = "tel" class = "form-control" placeholder="Your Phone No." required><br>
-                <textarea name = "message" class = "form-control" placeholder="Message" rows ="5" required></textarea><br>
-                <input type ="submit" class = "form-control submit" value = "SEND MESSAGE">
+        <div class="contact-form">
+            <form name="ContactForm" id="contact-form" method="post">
+                <input name="Name" type="text" class="form-control" placeholder="Your Full name" required><br>
+                <input name="Address" type="text" class="form-control" placeholder="Your Address" required><br>
+                <input name="Email" type="email" class="form-control" placeholder="Your Email" required><br>
+                <input name="Phone" type="tel" class="form-control" placeholder="Your Phone No." required><br>
+                <textarea name="Message" class="form-control" placeholder="Message" rows="5" required></textarea><br>
+                <input type="submit" class="form-control submit" value="SEND MESSAGE">
             </form>
         </div>
     </div>
@@ -135,6 +142,23 @@
             }
             console.log(menuItems.style.maxHeight)
         }
+
+        // function validate() {
+        //     var name = document.forms["ContactForm"]["Name"];
+        //     var address = document.forms["ContactForm"]["Address"];
+        //     var phone = document.forms["ContactForm"]["Phone"];
+        //     var email = document.forms["ContactForm"]["Email"];
+        //     var message = document.forms["ContactForm"]["Message"];
+
+        //     function isString(x) {
+        //         return Object.prototype.toString.call(x) === '[object String]';
+        //     }
+        //     if (name.value == "" && !isString(name)) {
+        //         window.alert("Please enter your name.");
+        //         name.focus();
+        //         return false;
+        //     }
+        // }
     </script>
 </body>
 
