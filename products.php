@@ -75,16 +75,6 @@ $result = $products->getProducts();
             console.log(menuItems.style.maxHeight)
         }
     </script>
-
-    <script>
-        var allProducts = document.querySelectorAll(".product");
-        allProducts.forEach(element => {
-            element.onclick = function() {
-                window.location.href = "product-details.html";
-            }
-
-        });
-    </script>
 </body>
 
 </html>
