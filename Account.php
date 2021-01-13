@@ -79,16 +79,16 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="/">
                         <img src="images/logo.png" alt="Hustlers" width="125px">
                     </a>
                 </div>
                 <nav>
                     <ul id="menuItems">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="aboutus.html">About</a></li>
-                        <li><a href="account.html">Account</a></li>
+                    <li><a href="/">Home</a></li>
+                        <li><a href="products">Products</a></li>
+                        <li><a href="aboutus">About</a></li>
+                        <li><a href="account">Account</a></li>
                     </ul>
                 </nav>
                 <img src="images/shopping-cart.png" width="30px" height="30px">
