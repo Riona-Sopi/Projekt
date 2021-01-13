@@ -122,6 +122,8 @@
             </div>
         </form>
         </div>
+        <?php
+include 'includes/footer.php'; ?>
         <script>
             var menuItems = document.getElementById("menuItems");
             menuItems.style.maxHeight = "0px";

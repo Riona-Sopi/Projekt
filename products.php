@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <!-- for media quering -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TODO: Rename -->
-    <title>All Products</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
-
+<?php
+$website_title = 'All Products';
+include 'includes/header.php';
+$products = new Products();
+$result = $products->getProducts();
+?>
 <body>
     <div class="container">
         <div class="navbar">
@@ -152,41 +144,8 @@
         </div>
     </div>
 
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col-1">
-                    <img src="images/logo.png" alt="">
-                    <!-- <p>qellimi yne eshte qe te ofrojm per klientet tane nje komoditet te papaprarraraparapare ndonjehere rabi riona meh</p> -->
-                </div>
-                <div class="footer-col-2">
-                    <h3>Useful Links</h3>
-                    <ul>
-                        <li>
-                            Privacy Policy
-                        </li>
-                        <li>
-                            Terms and Contitions
-                        </li>
-                        <li>
-                            Coupons
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col-3">
-                    <h3>Follow us</h3>
-                    <ul>
-                        <li>Twitter</li>
-                        <li>Facebook</li>
-                        <li>Instagram</li>
-                    </ul>
-                </div>
-
-            </div>
-            <hr>
-            <div class="copyright">Copyright 2020 - Hustlers</div>
-        </div>
-    </div>
+    <?php
+    include 'includes/footer.php'; ?>
 
     <script>
         var menuItems = document.getElementById("menuItems");

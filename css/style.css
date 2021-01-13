@@ -568,10 +568,18 @@ form .submit:hover {
 
 label {
     display: block;
+    background: whitesmoke;
 }
 
-.error {
-    color: red;
+label.error {
+    display: block;
+    width: 100%;
+    background-color: red;
+    color: whitesmoke;
+    max-width: 564px;
+    margin: 0 auto;
+    padding: 5px;
+    border-style: none;
 }
 
 
