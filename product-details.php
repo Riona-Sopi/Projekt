@@ -51,8 +51,8 @@ $result = $products-> getProductById($id);
             </div>
             <div class="col-2">
                 <p>Home / Hoodie</p>
-                <h1>Red Hoodie by superinjo</h1>
-                <h4>80$</h4>
+                <h1><?= $result['products_name']?></h1>
+                <h4><?= $result['products_id']?></h4>
                 <select>
                     <option>Select Size</option>
                     <option>Large</option>
