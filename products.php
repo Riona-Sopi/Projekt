@@ -8,16 +8,16 @@ $result = $products->getProducts();
     <div class="container">
         <div class="navbar">
             <div class="logo">
-                <a href="index.html">
+                <a href="/">
                     <img src="images/logo.png" alt="Hustlers" width="125px">
                 </a>
             </div>
             <nav>
                 <ul id="menuItems">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="aboutus.html">About</a></li>
-                    <li><a href="account.html">Account</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="products">Products</a></li>
+                    <li><a href="aboutus">About</a></li>
+                    <li><a href="account">Account</a></li>
                 </ul>
             </nav>
             <img src="images/shopping-cart.png" width="30px" height="30px">
@@ -33,108 +33,23 @@ $result = $products->getProducts();
                 <option>Sort by price</option>
             </select>
         </div>
+
         <div class="row">
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" class="product">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
+            <?php
+            foreach ($result as $product) : ?>
+                <div class="col-4">
+                    <a href="product-details?id=<?= $product['products_id'] ?>"><img src="images/hoodie-feature.jpg" class="product"></a>
+                    <h4><?= $product['products_name']; ?></h4>
+                    <div class="rating">
 
+                    </div>
+                    <p><?= $product['products_id']; ?></p>
                 </div>
-                <p>30$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" class="product">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
-
-                </div>
-                <p>30$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" class="product">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
-
-                </div>
-                <p>30$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" class="product">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
-
-                </div>
-                <p>30$</p>
-            </div>
+            <?php
+            endforeach ?>
         </div>
-        <div class="row">
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" class="product">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
 
-                </div>
-                <p>30$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" class="product">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
 
-                </div>
-                <p>30$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" class="product">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
-
-                </div>
-                <p>30$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" alt="">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
-
-                </div>
-                <p>30$</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" alt="">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
-
-                </div>
-                <p>30$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" alt="">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
-
-                </div>
-                <p>30$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" alt="">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
-
-                </div>
-                <p>30$</p>
-            </div>
-            <div class="col-4">
-                <img src="images/hoodie-feature.jpg" alt="">
-                <h4>White Printed Hoodie</h4>
-                <div class="rating">
-
-                </div>
-                <p>30$</p>
-            </div>
-        </div>
         <div class="page-btn">
             <span>1</span>
             <span>2</span>
