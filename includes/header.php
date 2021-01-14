@@ -1,6 +1,6 @@
 <?php
 $base_path = $_SERVER['DOCUMENT_ROOT'];
-include "./includes/class-autoload.inc.php";
+include "./hustlers-ubt/includes/class-autoload.inc.php";
 
 ?>
 <!DOCTYPE html>

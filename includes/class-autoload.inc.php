@@ -3,7 +3,7 @@
 spl_autoload_register("autoload");
 
 function autoload($className) {
-  $path = 'classes/';
+  $path = 'hustlers-ubt/classes/';
   $extension = '.class.php';
   $fileName = $path . $className . $extension;
 
