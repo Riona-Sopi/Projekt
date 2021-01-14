@@ -1,10 +1,10 @@
 <?php 
 
 class Dbh {
-  private $host = "db4free.net";
-  private $user = "hustlersroot";
-  private $pwd = "hustlersroot";
-  private $dbName = "hustlersdb";
+  private $host = "eu-cdbr-west-03.cleardb.net:3306";
+  private $user = "b7bce28de98c09";
+  private $pwd = "8f692d8d";
+  private $dbName = "heroku_f74c15e0c3b31a6";
 
   public function connect() {
     $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbName;
