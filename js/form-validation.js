@@ -88,14 +88,18 @@ jQuery(document).ready(function($) {
                 type: 'POST',
                 url: '/contact_add',
                 data: data,
+                dataType: 'json',
+                encode: true,
                 success: function(response) {
-                    if (response) {
+                    if (response.success) {
                         btn.btn_loading('reset');
                         that.html("Faleminderit qe keni gjetur kohen per te na kontaktuar");
                         alert("success")
-                    } else {
+                    } else if (!response.success) {
                         alert('this email exist');
                         btn.btn_loading('reset');
+                    } else {
+                        alert('something went wrong');
                     }
                 },
                 error: function(e) {
