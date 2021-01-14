@@ -4,8 +4,8 @@
 <?php
 $website_title = 'E-Commerce Hustlers';
 include 'includes/header.php';
-$products = new Products();
-$result = $products-> getProducts();
+// $products = new Products();
+// $result = $products-> getProducts();
 echo "test heroku"
 ?>
 <body>
