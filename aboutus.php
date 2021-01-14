@@ -94,23 +94,6 @@ include 'includes/footer.php'; ?>
             }
             console.log(menuItems.style.maxHeight)
         }
-
-        // function validate() {
-        //     var name = document.forms["ContactForm"]["Name"];
-        //     var address = document.forms["ContactForm"]["Address"];
-        //     var phone = document.forms["ContactForm"]["Phone"];
-        //     var email = document.forms["ContactForm"]["Email"];
-        //     var message = document.forms["ContactForm"]["Message"];
-
-        //     function isString(x) {
-        //         return Object.prototype.toString.call(x) === '[object String]';
-        //     }
-        //     if (name.value == "" && !isString(name)) {
-        //         window.alert("Please enter your name.");
-        //         name.focus();
-        //         return false;
-        //     }
-        // }
     </script>
 </body>
 
