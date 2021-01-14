@@ -1,7 +1,7 @@
 <?php 
 
 class Dbh {
-  private $host = "db4free.net:3306";
+  private $host = "db4free.net";
   private $user = "hustlersroot";
   private $pwd = "hustlersroot";
   private $dbName = "hustlersdb";
