@@ -4,7 +4,7 @@ class ContactForm {
   public function getAllContactForms() {
     $sql = "SELECT * FROM contact_form
     ORDER BY id DESC;";
-    $stmt = $this->$GLOBALS['db']->prepare($sql);
+    $stmt = $GLOBALS['db']->prepare($sql);
     $stmt->execute();
 
     while($result = $stmt->fetchAll()) {
@@ -14,7 +14,7 @@ class ContactForm {
 
   public function getContactFormByEmail($email){
       $sql = "SELECT * FROM contact_form WHERE email = ?";
-      $stmt = $this->$GLOBALS['db']->prepare($sql);
+      $stmt = $GLOBALS['db']->prepare($sql);
       $stmt-> execute([$email]);
       $result = $stmt -> fetch();
       return $result;
@@ -22,13 +22,13 @@ class ContactForm {
 
   public function addContactForm($name,$mAddress,$email,$phoneNumber,$mMessage) {
     $sql = "INSERT INTO contact_form(fullname, address, email, phoneNumber, message) VALUES (?, ?, ?, ?, ?)";
-    $stmt = $this->$GLOBALS['db']->prepare($sql);
+    $stmt =$GLOBALS['db']->prepare($sql);
     $stmt->execute([$name, $mAddress,$email,$phoneNumber,$mMessage]);
   }
 
   public function deleteContactForm($id) {
     $sql = "DELETE FROM contact_form WHERE id = ?";
-    $stmt = $this->$GLOBALS['db']->prepare($sql);
+    $stmt = $GLOBALS['db']->prepare($sql);
     $stmt->execute([$id]);
   }
 }
