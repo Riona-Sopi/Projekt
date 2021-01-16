@@ -1,5 +1,7 @@
 <?php
-include "./includes/class-autoload.inc.php";
+$base_path = $_SERVER['DOCUMENT_ROOT'];
+include $base_path . '/config/db.php';
+include $base_path . '/config/import_class.php';
 $contactForms = new ContactForm();
 
 $errors         = array();
