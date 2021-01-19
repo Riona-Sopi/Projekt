@@ -90,17 +90,36 @@ jQuery(document).ready(function($) {
                 data: data,
                 dataType: 'json',
                 encode: true,
-                success: function(response) {
-                    if (response.success) {
-                        btn.btn_loading('reset');
-                        that.html("Faleminderit qe keni gjetur kohen per te na kontaktuar");
-                        alert("success")
-                    } else if (!response.success) {
-                        alert('this email exist');
-                        btn.btn_loading('reset');
+                success: function(data) {
+                    console.log(data);
+                    if (!data.success) {
+                        if (data.errors.msg) {
+                            console.log(data.errors.msg);
+                            $.notify(
+                                data.errors.msg, { position: "top center" }
+                            );
+                            btn.btn_loading('reset');
+                        }
                     } else {
-                        alert('something went wrong');
+                        $.notify(data.msg, { position: "top center", className: "success" });
+                        $([document.documentElement, document.body]).animate({
+                            scrollTop: $("#contact-form").offset().top
+                        }, 1000)
+                        btn.btn_loading('reset');
+                        that.hide();
+                        // that.html("Faleminderit qe keni gjetur kohen per te na kontaktuar");
+                        // alert("success")
                     }
+                    // if (response.success) {
+                    //     btn.btn_loading('reset');
+                    //     that.html("Faleminderit qe keni gjetur kohen per te na kontaktuar");
+                    //     alert("success")
+                    // } else if (!response.success) {
+                    //     alert('this email exist');
+                    //     btn.btn_loading('reset');
+                    // } else {
+                    //     alert('something went wrong');
+                    // }
                 },
                 error: function(e) {
                     btn.btn_loading('reset');
