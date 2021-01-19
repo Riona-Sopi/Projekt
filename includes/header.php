@@ -22,5 +22,6 @@ $website_title = (isset($website_title) && !empty($website_title)) ? $website_ti
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="js/form-validation.js"></script>
+    <script src="notify/notify.min.js" defer></script>
 
 </head>
