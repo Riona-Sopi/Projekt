@@ -95,6 +95,7 @@
                 <img src="images/menu-icon.png" class="menu-icon" onclick="toggleMenu()">
             </div>
         </div>
+        <h2 style="text-align: center;">Create your free Account</h2>
 
         <form action="/action_page.php" method="post">
             <div class="imgcontainer">
@@ -102,34 +103,35 @@
             </div>
             <div class="container form2">
                 <div class="container form2">
-                    <label for="uname"><b>Useri</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <label for="firstname"><b>Emri</b></label>
+                    <input type="text" placeholder="Enter First name" name="firstname" required>
+
+                    <label for="lastname"><b>Mbiemri</b></label>
+                    <input type="text" placeholder="Enter Last name" name="lastname" required>
+                   
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
                     <label for="psw"><b>Passi</b></label>
                     <input type="password" placeholder="Enter Password" name="psw" required>
 
-                    <button type="submit">Login</button>
-                    <button type="submit" id="butoni">Don't have one? Sign up Now</button>
-                    <script>
-                        var btn = document.getElementById('butoni');
-                        btn.addEventListener('click', function() {
-                        document.location.href = 'Register.php';
-                        });
-                    </script>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+                    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
                     <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember 
-     </label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember 
+                    </label>
+                    <button type="submit" class="registerbtn">Register</button>
                 </div>
 
                 <div class="container form2" style="text-align: center;">
-                    <button type="button" class="psw">Forgot <a href="#">password?</a></button>
                     <button type="button" class="cancelbtn">Cancel</button>
                 </div>
             </div>
         </form>
         </div>
         <?php
-include 'includes/footer.php'; ?>
+            include 'includes/footer.php'; ?>
         <script>
             var menuItems = document.getElementById("menuItems");
             menuItems.style.maxHeight = "0px";
